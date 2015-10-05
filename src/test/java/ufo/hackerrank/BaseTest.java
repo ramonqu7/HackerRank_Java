@@ -33,8 +33,8 @@ public abstract class BaseTest {
 	@Before
 	public void setUpBeforeTest() {
 		startTime = new Date();
-		defaultOutptStream.println("===================================================================");
-		defaultOutptStream.println("BEGIN TEST " + name.getMethodName());
+		defaultOutptStream.println("\n===================================================================");
+		defaultOutptStream.println(" - BEGIN TEST " + name.getMethodName());
 		defaultOutptStream.println("===================================================================");
 	}
 
@@ -47,8 +47,8 @@ public abstract class BaseTest {
 		System.setOut(defaultOutptStream);
 
 		defaultOutptStream.println("===================================================================");
-		defaultOutptStream.println("END TEST " + name.getMethodName());
-		defaultOutptStream.println("Execution time: " + time + " seconds");
+		defaultOutptStream.println(" - END TEST " + name.getMethodName());
+		defaultOutptStream.println(" - Execution time: " + time + " seconds");
 		defaultOutptStream.println("===================================================================");
 	}
 
@@ -68,14 +68,7 @@ public abstract class BaseTest {
 		}
 		InputStream stubInputStream = IOUtils.toInputStream(buffer.toString());
 		System.setIn(stubInputStream);
-
-		System.setOut(new PrintStream(System.out) {
-			@Override
-			public void println(String text) {
-				output.add(text);
-				super.println(text);
-			}
-		});
+		System.setOut(new PrintStreamDecorator(System.out, output));
 	}
 
 	protected void verifyOutput(String[] expectedOutput) {
