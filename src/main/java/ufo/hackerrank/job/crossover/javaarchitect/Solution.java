@@ -17,9 +17,9 @@ package ufo.hackerrank.job.crossover.javaarchitect;
 
 import java.io.*;
 import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
+//import java.text.*;
+//import java.math.*;
+//import java.util.regex.*;
 
 public class Solution {
 
@@ -46,25 +46,26 @@ public class Solution {
 
 
 	public static void main(String[] args) throws IOException{
-        Scanner in = new Scanner(System.in);
-        //final String fileName = System.getenv("OUTPUT_PATH");
-        //BufferedWriter bw = new BufferedWriter(new FileWriter(fileName));
-        int res;
-
-        int _arr_size = Integer.parseInt(in.nextLine());
-        int[] _arr = new int[_arr_size];
-        int _arr_item;
-        for(int _arr_i = 0; _arr_i < _arr_size; _arr_i++) {
-            _arr_item = Integer.parseInt(in.nextLine());
-            _arr[_arr_i] = _arr_item;
+        try (Scanner in = new Scanner(System.in);) {
+	        //final String fileName = System.getenv("OUTPUT_PATH");
+	        //BufferedWriter bw = new BufferedWriter(new FileWriter(fileName));
+	        int res;
+	
+	        int _arr_size = Integer.parseInt(in.nextLine());
+	        int[] _arr = new int[_arr_size];
+	        int _arr_item;
+	        for(int _arr_i = 0; _arr_i < _arr_size; _arr_i++) {
+	            _arr_item = Integer.parseInt(in.nextLine());
+	            _arr[_arr_i] = _arr_item;
+	        }
+	
+	        res = lonelyInteger(_arr);
+	        System.out.println(res);
+	        //bw.write(String.valueOf(res));
+	        //bw.newLine();
+	
+	        //bw.close();
         }
-
-        res = lonelyInteger(_arr);
-        System.out.println(res);
-        //bw.write(String.valueOf(res));
-        //bw.newLine();
-
-        //bw.close();
     }
 
 }
