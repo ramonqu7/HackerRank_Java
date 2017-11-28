@@ -24,18 +24,14 @@ public class GemstonesTest extends BaseTest {
 	@Test
 	public void test() throws Exception {
 
-		setInput(new String[] {
-				"3",
-				"abcdde",
-				"baccd",
-				"eeabg"
-		});
+		setInput( "3",
+				  "abcdde",
+				  "baccd",
+				  "eeabg" );
 
 		Gemstones.main(new String[0]);
 
-		verifyOutput(new String[] {
-				"2"
-		});
+		verifyOutput( "2" );
 
 	}
 

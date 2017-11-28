@@ -23,18 +23,14 @@ public class SolveMeSecondTest extends BaseTest {
 
 	@Test
 	public void test() {
-		setInput(new String[] {
-				"2",
-				"2 3",
-				"3 7"
-		});
+		setInput( "2",
+				  "2 3",
+			      "3 7" );
 
 		SolveMeSecond.main(new String[]{});
 
-		verifyOutput(new String[] {
-				"5",
-				"10"
-		});
+		verifyOutput( "5",
+				      "10" );
 	}
 
 }

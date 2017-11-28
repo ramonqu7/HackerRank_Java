@@ -1,10 +1,11 @@
 package ufo.hackerrank;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import java.io.InputStream;
 import java.io.PrintStream;
 import java.math.BigDecimal;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -56,22 +57,22 @@ public abstract class BaseTest {
 		setInput(new String[] { line });
 	}
 
-	private List<String> output = new ArrayList<>();
+	private final List<String> output = new ArrayList<>();
 
-	protected void setInput(String[] lines) {
-		StringBuffer buffer = new StringBuffer();
+	protected void setInput(String... lines) {
+		final StringBuffer buffer = new StringBuffer();
 		for (int i = 0; i < lines.length; i++) {
 			buffer.append(lines[i]);
-			if (i != (lines.length + 1)) {
+			if (i != lines.length + 1) {
 				buffer.append("\n");
 			}
 		}
-		InputStream stubInputStream = IOUtils.toInputStream(buffer.toString());
+		final InputStream stubInputStream = IOUtils.toInputStream(buffer.toString(), StandardCharsets.UTF_8);
 		System.setIn(stubInputStream);
 		System.setOut(new PrintStreamDecorator(System.out, output));
 	}
 
-	protected void verifyOutput(String[] expectedOutput) {
+	protected void verifyOutput(String... expectedOutput) {
 		assertEquals(expectedOutput.length, output.size());
 		for (int i=0; i<expectedOutput.length; i++) {
 			assertEquals(expectedOutput[i], output.get(i));

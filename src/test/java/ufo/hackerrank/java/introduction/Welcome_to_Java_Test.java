@@ -24,14 +24,12 @@ public class Welcome_to_Java_Test extends BaseTest {
 	@Test
 	public void test() {
 
-		setInput(new String[] {});
+		setInput();
 
 		Welcome_to_Java.main(new String[]{});
 
-		verifyOutput(new String[] {
-				"Hello World.",
-				"Hello Java."
-		});
+		verifyOutput( "Hello World.",
+				      "Hello Java." );
 
 	}
 

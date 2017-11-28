@@ -15,45 +15,34 @@
  ******************************************************************************/
 package ufo.hackerrank.job.crossover.javaarchitect;
 
-import static org.junit.Assert.*;
-
 import java.io.IOException;
 
 import org.junit.Test;
 
 import ufo.hackerrank.BaseTest;
-import ufo.hackerrank.java.introduction.Stdin_And_Stdout_1;
 
 public class SolutionTest extends BaseTest {
 
 	@Test
 	public void test1() throws IOException {
-	setInput(new String[] {
-			"1",
-			"1"
-	});
+		setInput("1",
+				 "1");
 
-	Solution.main(new String[]{});
+		Solution.main(new String[]{});
 
-	verifyOutput(new String[] {
-			"1"
-	});
+		verifyOutput("1");
 	}
 
 	@Test
 	public void test2() throws IOException {
-	setInput(new String[] {
-			"3",
-			"1",
-			"1",
-			"2"
-	});
+		setInput("3",
+				 "1",
+				 "1",
+				 "2");
 
-	Solution.main(new String[]{});
+		Solution.main(new String[]{});
 
-	verifyOutput(new String[] {
-			"2"
-	});
+		verifyOutput("2");
 	}
 
 }

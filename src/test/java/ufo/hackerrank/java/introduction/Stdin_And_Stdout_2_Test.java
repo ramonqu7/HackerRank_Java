@@ -24,19 +24,15 @@ public class Stdin_And_Stdout_2_Test extends BaseTest {
 	@Test
 	public void test() throws Exception {
 
-		setInput(new String[] {
-				"42",
-				"3.1415",
-				"Welcome to Hackerrank Java tutorials!"
-		});
+		setInput( "42",
+				  "3.1415",
+				  "Welcome to Hackerrank Java tutorials!" );
 
 		Stdin_And_Stdout_2.main(new String[]{});
 
-		verifyOutput(new String[] {
-				"String: Welcome to Hackerrank Java tutorials!",
-				"Double: 3.1415",
-				"Int: 42"
-		});
+		verifyOutput( "String: Welcome to Hackerrank Java tutorials!",
+				      "Double: 3.1415",
+				      "Int: 42" );
 
 	}
 

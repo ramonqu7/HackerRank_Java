@@ -23,16 +23,12 @@ public class SolveMeFirstTest extends BaseTest {
 
 	@Test
 	public void test() {
-		setInput(new String[] {
-				"2",
-				"3"
-		});
+		setInput( "2",
+				  "3" );
 
 		SolveMeFirst.main(new String[]{});
 
-		verifyOutput(new String[] {
-				"5"
-		});
+		verifyOutput( "5" );
 	}
 
 }

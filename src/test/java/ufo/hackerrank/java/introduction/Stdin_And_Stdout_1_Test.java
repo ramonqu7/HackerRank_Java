@@ -24,19 +24,16 @@ public class Stdin_And_Stdout_1_Test extends BaseTest {
 	@Test
 	public void test() throws Exception {
 
-		setInput(new String[] {
-				"42",
-				"100",
-				"125"
-		});
+		setInput("42",
+				 "100",
+				 "125");
 
 		Stdin_And_Stdout_1.main(new String[]{});
 
-		verifyOutput(new String[] {
-				"42",
-				"100",
-				"125"
-		});
+		verifyOutput("42",
+				     "100",
+				     "125"
+		);
 
 	}
 
