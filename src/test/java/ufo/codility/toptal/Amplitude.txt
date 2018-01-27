@@ -1,0 +1,52 @@
+Task description
+
+A non-empty zero-indexed array A consisting of N integers is given. A subsequence of array A is any sequence obtained by removing some (possibly none or all) elements from A. The amplitude of a subsequence of array A is the difference between the largest and the smallest element in this subsequence. The amplitude of the empty subsequence is assumed to be 0.
+
+For example, consider array A consisting of six elements such that:
+  A[0] =  6
+  A[1] = 10
+  A[2] =  6
+  A[3] =  9
+  A[4] =  7
+  A[5] =  8
+
+These are some of the subsequences of array A and their amplitudes:
+
+        subsequence [6, 6, 7] has amplitude 1;
+        subsequence [6, 10, 6, 9, 7, 8] has amplitude 4;
+        subsequence [6, 6, 7, 8] has amplitude 2;
+        subsequence [9, 7] has amplitude 2;
+        subsequence [9] has amplitude 0;
+        subsequence [] has amplitude 0.
+
+A subsequence of array A is called quasi-constant if its amplitude does not exceed 1. In the example above, the first, fifth and sixth subsequences are quasi-constant. Subsequence [6, 6, 7] is the longest possible quasi-constant subsequence of array A.
+
+Write a function:
+
+    class Solution { public int solution(int[] A); }
+
+that, given a non-empty zero-indexed array A consisting of N integers, returns the length of the longest quasi-constant subsequence of array A.
+
+For example, given array A consisting of six elements such that:
+  A[0] =  6
+  A[1] = 10
+  A[2] =  6
+  A[3] =  9
+  A[4] =  7
+  A[5] =  8
+
+the function should return 3, as explained above.
+
+Assume that:
+
+        N is an integer within the range [1..100,000];
+        each element of array A is an integer within the range [−2,147,483,648..2,147,483,647].
+
+Complexity:
+
+        expected worst-case time complexity is O(N*log(N));
+        expected worst-case space complexity is O(N), beyond input storage (not counting the storage required for input arguments).
+
+Copyright 2009–2018 by Codility Limited. All Rights Reserved. Unauthorized copying, publication or disclosure prohibited.
+
+Custom test casesformat: [6, 10, 6, 9, 7, 8]
