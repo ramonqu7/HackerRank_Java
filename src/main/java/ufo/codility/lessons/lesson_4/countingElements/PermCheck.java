@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright 2015 Francesco Cina'
+ * Copyright 2018 Francesco Cina'
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,24 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package ufo.hackerrank.algorithms.warmup;
+package ufo.codility.lessons.lesson_4.countingElements;
 
-import org.junit.Test;
+public class PermCheck {
 
-import ufo.BaseTest;
+	public int solution(int[] A) {
+        final boolean[] present = new boolean[A.length];
 
-public class SolveMeSecondTest extends BaseTest {
+        for (final int element : A) {
+        	final int val = element - 1;
+        	if (val<A.length) {
+        		present[val] = true;
+        	}
+		}
 
-	@Test
-	public void test() {
-		setInput( "2",
-				  "2 3",
-			      "3 7" );
-
-		SolveMeSecond.main(new String[]{});
-
-		verifyOutput( "5",
-				      "10" );
-	}
+        for (final boolean element : present) {
+			if (!element) {
+				return 0;
+			}
+		}
+        return 1;
+    }
 
 }

@@ -1,4 +1,4 @@
-package ufo.hackerrank;
+package ufo;
 
 import static org.junit.Assert.assertEquals;
 
@@ -17,6 +17,8 @@ import org.junit.Rule;
 import org.junit.rules.TestName;
 import org.junit.runner.RunWith;
 import org.junit.runners.BlockJUnit4ClassRunner;
+
+import ufo.hackerrank.PrintStreamDecorator;
 
 /**
  * Unit test for simple App.

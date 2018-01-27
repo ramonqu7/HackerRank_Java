@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright 2015 Francesco Cina'
+ * Copyright 2018 Francesco Cina'
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,24 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package ufo.hackerrank.algorithms.warmup;
+package ufo.hackerrank.job.numbrs.consecutive_sum;
+
+import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import ufo.BaseTest;
-
-public class SolveMeSecondTest extends BaseTest {
+public class ConsecutiveSum_SolutionTest {
 
 	@Test
-	public void test() {
-		setInput( "2",
-				  "2 3",
-			      "3 7" );
-
-		SolveMeSecond.main(new String[]{});
-
-		verifyOutput( "5",
-				      "10" );
+	public void test1() {
+		assertEquals(3, Solution.consecutive(15));
+		assertEquals(1, Solution.consecutive(10));
+		assertEquals(3, Solution.consecutive(250));
 	}
 
 }

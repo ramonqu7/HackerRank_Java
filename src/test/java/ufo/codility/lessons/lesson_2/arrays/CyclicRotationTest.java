@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright 2015 Francesco Cina'
+ * Copyright 2018 Francesco Cina'
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,24 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package ufo.hackerrank.algorithms.warmup;
+package ufo.codility.lessons.lesson_2.arrays;
+
+import static org.junit.Assert.*;
 
 import org.junit.Test;
 
 import ufo.BaseTest;
 
-public class SolveMeSecondTest extends BaseTest {
+public class CyclicRotationTest extends BaseTest {
 
 	@Test
 	public void test() {
-		setInput( "2",
-				  "2 3",
-			      "3 7" );
 
-		SolveMeSecond.main(new String[]{});
+		final CyclicRotation rot = new CyclicRotation();
 
-		verifyOutput( "5",
-				      "10" );
+		assertArrayEquals( new int[] {} , rot.solution(new int[] {}, 3)  );
+		assertArrayEquals( new int[] {3, 8, 9, 7, 6} , rot.solution(new int[] {3, 8, 9, 7, 6}, 10)  );
+		assertArrayEquals( new int[] {3, 8, 9, 7, 6} , rot.solution(new int[] {3, 8, 9, 7, 6}, 0)  );
+		assertArrayEquals( new int[] {9, 7, 6, 3, 8} , rot.solution(new int[] {3, 8, 9, 7, 6}, 3)  );
+
 	}
 
 }

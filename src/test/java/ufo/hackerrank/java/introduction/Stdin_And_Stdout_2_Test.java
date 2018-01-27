@@ -17,7 +17,7 @@ package ufo.hackerrank.java.introduction;
 
 import org.junit.Test;
 
-import ufo.hackerrank.BaseTest;
+import ufo.BaseTest;
 
 public class Stdin_And_Stdout_2_Test extends BaseTest {
 

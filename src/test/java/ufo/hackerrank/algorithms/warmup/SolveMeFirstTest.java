@@ -17,7 +17,7 @@ package ufo.hackerrank.algorithms.warmup;
 
 import org.junit.Test;
 
-import ufo.hackerrank.BaseTest;
+import ufo.BaseTest;
 
 public class SolveMeFirstTest extends BaseTest {
 

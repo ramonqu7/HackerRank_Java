@@ -19,7 +19,7 @@ import java.io.IOException;
 
 import org.junit.Test;
 
-import ufo.hackerrank.BaseTest;
+import ufo.BaseTest;
 
 public class SolutionTest extends BaseTest {
 

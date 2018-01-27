@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright 2015 Francesco Cina'
+ * Copyright 2018 Francesco Cina'
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,24 +13,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package ufo.hackerrank.algorithms.warmup;
+package ufo.codility.lessons.lesson_4.countingElements;
+
+import static org.junit.Assert.*;
 
 import org.junit.Test;
 
 import ufo.BaseTest;
 
-public class SolveMeSecondTest extends BaseTest {
+public class PermCheckTest extends BaseTest {
 
 	@Test
 	public void test() {
-		setInput( "2",
-				  "2 3",
-			      "3 7" );
+		final PermCheck perm = new PermCheck();
 
-		SolveMeSecond.main(new String[]{});
-
-		verifyOutput( "5",
-				      "10" );
+		assertEquals( 1 , perm.solution(new int[] {2,1} ) );
+		assertEquals( 1 , perm.solution(new int[] {1} ) );
+		assertEquals( 0 , perm.solution(new int[] {2} ) );
+		assertEquals( 0 , perm.solution(new int[] {1,4,3} ) );
+		assertEquals( 1 , perm.solution(new int[] {1,4,3,2} ) );
+		assertEquals( 0 , perm.solution(new int[] {5,4,3,2} ) );
 	}
 
 }

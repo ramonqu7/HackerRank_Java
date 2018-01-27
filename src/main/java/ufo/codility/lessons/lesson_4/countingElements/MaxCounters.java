@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright 2015 Francesco Cina'
+ * Copyright 2018 Francesco Cina'
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,24 +13,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package ufo.hackerrank.algorithms.warmup;
+package ufo.codility.lessons.lesson_4.countingElements;
 
-import org.junit.Test;
 
-import ufo.BaseTest;
+public class MaxCounters {
 
-public class SolveMeSecondTest extends BaseTest {
+    public int[] solution(int N, int[] A) {
+    	int base = 0;
+        int max = 0;
+        int[] result = new int[N];
 
-	@Test
-	public void test() {
-		setInput( "2",
-				  "2 3",
-			      "3 7" );
+        for (int op : A) {
+        	op = op - 1;
+        	if (op<N) {
+        		final int newValue = result[op]+1;
+        		result[op] = newValue;
+        		max = Math.max(max, newValue);
+        	} else {
+        		result = new int[N];
+        		base = max + base;
+        		max = 0;
+        	}
+		}
 
-		SolveMeSecond.main(new String[]{});
-
-		verifyOutput( "5",
-				      "10" );
-	}
+        for (int i = 0; i < result.length; i++) {
+			result[i] = result[i] + base;
+		}
+        return result;
+    }
 
 }

@@ -17,7 +17,7 @@ package ufo.hackerrank.java.introduction;
 
 import org.junit.Test;
 
-import ufo.hackerrank.BaseTest;
+import ufo.BaseTest;
 
 public class Welcome_to_Java_Test extends BaseTest {
 

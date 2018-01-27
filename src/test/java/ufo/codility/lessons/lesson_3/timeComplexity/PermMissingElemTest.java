@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright 2015 Francesco Cina'
+ * Copyright 2018 Francesco Cina'
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,24 +13,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package ufo.hackerrank.algorithms.warmup;
+package ufo.codility.lessons.lesson_3.timeComplexity;
+
+import static org.junit.Assert.*;
 
 import org.junit.Test;
 
 import ufo.BaseTest;
+import ufo.codility.lessons.lesson_3.timeComplexity.PermMissingElem;
 
-public class SolveMeSecondTest extends BaseTest {
+public class PermMissingElemTest extends BaseTest {
 
 	@Test
 	public void test() {
-		setInput( "2",
-				  "2 3",
-			      "3 7" );
+		final PermMissingElem perm = new PermMissingElem();
 
-		SolveMeSecond.main(new String[]{});
+		assertEquals( 4, perm.solution(new int[] {2,3,1,5}) );
+		assertEquals( 1, perm.solution(new int[] {2,3,4,5}) );
+		assertEquals( 5, perm.solution(new int[] {2,3,1,4}) );
 
-		verifyOutput( "5",
-				      "10" );
 	}
 
 }

@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright 2015 Francesco Cina'
+ * Copyright 2018 Francesco Cina'
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,24 +13,19 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  ******************************************************************************/
-package ufo.hackerrank.algorithms.warmup;
+package ufo.codility.challenges;
+
+import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import ufo.BaseTest;
-
-public class SolveMeSecondTest extends BaseTest {
+public class ChessKnightTest {
 
 	@Test
 	public void test() {
-		setInput( "2",
-				  "2 3",
-			      "3 7" );
-
-		SolveMeSecond.main(new String[]{});
-
-		verifyOutput( "5",
-				      "10" );
+		final int board = 8;
+		assertEquals(6, ChessKnight.BFS(new Node(0, 7), new Node(7, 0), board));
+		assertEquals(0, ChessKnight.BFS(new Node(0, 0), new Node(0, 0), board));
 	}
 
 }
